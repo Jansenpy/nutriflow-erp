@@ -4,9 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>chamadistribuidora ERP</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css" /><link rel="stylesheet" href="auth.css" />
   </head>
   <body>
+    <section id="auth-screen" class="auth-screen"><div class="auth-card"><div class="auth-brand"><span class="brand-mark">C</span><strong>chamadistribuidora</strong></div><h1>Login</h1><p>Use seu e-mail corporativo para acessar.</p><input id="email" type="email" placeholder="E-mail" /><input id="password" type="password" placeholder="Senha" /><button id="login" class="primary">Entrar</button><button id="forgot-password" class="link">Esqueci minha senha</button><p id="auth-message"></p></div></section>
     <aside class="sidebar">
       <div class="brand"><span class="brand-mark">C</span><span>chamadistribuidora</span></div>
       <nav aria-label="Menu principal">
@@ -50,6 +51,6 @@
       <section id="financeiro" class="page module"><div class="module-heading"><div><h2>Financeiro</h2><p>Fluxo de caixa, contas a pagar e contas a receber.</p></div><button class="primary">+ Lançamento</button></div><div class="empty-card"><span>◉</span><h3>Controle financeiro</h3><p>Concilie recebimentos, acompanhe inadimplência e analise o caixa.</p><button class="primary">Novo lançamento</button></div></section>
       <section id="fiscal" class="page module"><div class="module-heading"><div><h2>Fiscal</h2><p>NF-e, MDF-e, notas e obrigações fiscais.</p></div><button class="primary">+ Emitir NF-e</button></div><div class="empty-card"><span>▤</span><h3>Documentos fiscais</h3><p>Emita e acompanhe NF-e e MDF-e com segurança e rastreabilidade.</p><button class="primary">Emitir documento</button></div></section>
       <section id="relatorios" class="page module"><div class="module-heading"><div><h2>Relatórios</h2><p>Indicadores para decisões comerciais e operacionais.</p></div><button class="primary">+ Criar relatório</button></div><div class="empty-card"><span>◲</span><h3>Inteligência do negócio</h3><p>Analise vendas, margem, giro de estoque, clientes e entregas.</p><button class="primary">Explorar relatórios</button></div></section>
-    </main><script src="app.js"></script>
+    </main><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="app.js"></script>
   </body>
 </html>
