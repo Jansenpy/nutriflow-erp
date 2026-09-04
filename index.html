@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NutriFlow ERP</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="brand"><span class="brand-mark">N</span><span>nutriflow</span></div>
+      <nav aria-label="Menu principal">
+        <button class="nav-item active" data-page="dashboard"><span>▦</span>Dashboard</button>
+        <p class="nav-label">OPERAÇÃO</p>
+        <button class="nav-item" data-page="vendas"><span>◫</span>Vendas</button>
+        <button class="nav-item" data-page="clientes"><span>♙</span>Clientes</button>
+        <button class="nav-item" data-page="produtos"><span>◈</span>Produtos & Estoque</button>
+        <button class="nav-item" data-page="logistica"><span>▱</span>Logística</button>
+        <p class="nav-label">GESTÃO</p>
+        <button class="nav-item" data-page="financeiro"><span>◉</span>Financeiro</button>
+        <button class="nav-item" data-page="fiscal"><span>▤</span>Fiscal</button>
+        <button class="nav-item" data-page="relatorios"><span>◲</span>Relatórios</button>
+      </nav>
+      <div class="sidebar-footer"><span class="avatar">JS</span><div><strong>João Silva</strong><small>Administrador</small></div><button title="Sair">↪</button></div>
+    </aside>
+    <main>
+      <header>
+        <button class="mobile-menu" aria-label="Abrir menu">☰</button>
+        <div><p class="eyebrow">SEXTA-FEIRA, 04 DE SETEMBRO</p><h1 id="page-title">Visão geral</h1></div>
+        <div class="header-actions"><button class="icon-button">⌕</button><button class="icon-button notification">♧</button><button class="primary" id="new-action">+ Nova venda</button></div>
+      </header>
+      <section id="dashboard" class="page active">
+        <div class="welcome"><div><h2>Bom dia, João <span>👋</span></h2><p>Acompanhe os principais indicadores da sua operação.</p></div><select aria-label="Período"><option>Este mês</option><option>Últimos 30 dias</option><option>Este ano</option></select></div>
+        <div class="metrics">
+          <article><div class="metric-icon green">↗</div><p>Faturamento do mês</p><h3>R$ 284.750,00</h3><small class="up">↑ 12,5% <span>vs. mês anterior</span></small></article>
+          <article><div class="metric-icon blue">▣</div><p>Pedidos em aberto</p><h3>48</h3><small class="up">↑ 8,1% <span>vs. mês anterior</span></small></article>
+          <article><div class="metric-icon orange">◈</div><p>Estoque crítico</p><h3>07 <span>itens</span></h3><small class="warning">● Requer atenção</small></article>
+          <article><div class="metric-icon purple">◉</div><p>A receber hoje</p><h3>R$ 18.420,00</h3><small class="muted">12 títulos vencem hoje</small></article>
+        </div>
+        <div class="grid-main">
+          <article class="panel sales-chart"><div class="panel-title"><div><h3>Faturamento</h3><p>Comparativo de vendas no período</p></div><button class="dots">•••</button></div><div class="legend"><span><i class="dot income"></i>Faturamento</span><span><i class="dot forecast"></i>Meta</span></div><div class="chart"><div class="y-axis"><span>R$ 80k</span><span>R$ 60k</span><span>R$ 40k</span><span>R$ 20k</span><span>R$ 0</span></div><div class="bars"><div style="--h:30%"><i></i><b>Mai</b></div><div style="--h:45%"><i></i><b>Jun</b></div><div style="--h:54%"><i></i><b>Jul</b></div><div style="--h:67%"><i></i><b>Ago</b></div><div class="selected" style="--h:85%"><i></i><em>R$ 72.450</em><b>Set</b></div></div></div></article>
+          <article class="panel goals"><div class="panel-title"><div><h3>Meta mensal</h3><p>Setembro de 2026</p></div><button class="dots">•••</button></div><div class="ring"><div><strong>81%</strong><span>concluído</span></div></div><div class="goal-values"><div><p>Realizado</p><strong>R$ 284.750</strong></div><div><p>Meta</p><strong>R$ 350.000</strong></div></div></article>
+        </div>
+        <div class="grid-bottom"><article class="panel recent"><div class="panel-title"><div><h3>Pedidos recentes</h3><p>Últimas movimentações comerciais</p></div><button class="link" data-page="vendas">Ver todos →</button></div><table><thead><tr><th>CLIENTE</th><th>PEDIDO</th><th>VALOR</th><th>STATUS</th></tr></thead><tbody><tr><td><b>Agropecuária São José</b><small>Campinas, SP</small></td><td>#PED-2026</td><td><b>R$ 4.820,00</b></td><td><span class="badge processing">Em separação</span></td></tr><tr><td><b>Fazenda Boa Vista</b><small>Jundiaí, SP</small></td><td>#PED-2025</td><td><b>R$ 7.350,00</b></td><td><span class="badge shipping">Em entrega</span></td></tr><tr><td><b>Pet House Distribuidora</b><small>São Paulo, SP</small></td><td>#PED-2024</td><td><b>R$ 2.190,00</b></td><td><span class="badge complete">Faturado</span></td></tr></tbody></table></article><article class="panel alerts"><div class="panel-title"><div><h3>Alertas</h3><p>Itens que exigem atenção</p></div><button class="link">Ver todos →</button></div><div class="alert"><span class="alert-icon stock">◈</span><div><b>Estoque baixo</b><p>Ração Cães Adultos 15kg</p></div><button>›</button></div><div class="alert"><span class="alert-icon bill">$</span><div><b>Título a vencer</b><p>Cliente: Fazenda Santa Clara</p></div><button>›</button></div><div class="alert"><span class="alert-icon route">▱</span><div><b>Entrega atrasada</b><p>Pedido #PED-2018</p></div><button>›</button></div></article></div>
+      </section>
+      <section id="vendas" class="page module"><div class="module-heading"><div><h2>Vendas</h2><p>Pedidos, orçamentos e acompanhamento comercial.</p></div><button class="primary">+ Novo pedido</button></div><div class="empty-card"><span>◫</span><h3>Central de vendas</h3><p>Crie pedidos, acompanhe a separação e transforme orçamentos em vendas.</p><button class="primary">Criar pedido</button></div></section>
+      <section id="clientes" class="page module"><div class="module-heading"><div><h2>Clientes</h2><p>Cadastros, limite de crédito e histórico de compras.</p></div><button class="primary">+ Novo cliente</button></div><div class="empty-card"><span>♙</span><h3>Base de clientes</h3><p>Centralize dados, contatos, endereços de entrega e condições comerciais.</p><button class="primary">Cadastrar cliente</button></div></section>
+      <section id="produtos" class="page module"><div class="module-heading"><div><h2>Produtos & Estoque</h2><p>Produtos, lotes, validade e reposição.</p></div><button class="primary">+ Novo produto</button></div><div class="empty-card"><span>◈</span><h3>Gestão de estoque</h3><p>Controle saldo por depósito, lote e prazo de validade.</p><button class="primary">Cadastrar produto</button></div></section>
+      <section id="logistica" class="page module"><div class="module-heading"><div><h2>Logística</h2><p>Rotas, expedição, entregas e motoristas.</p></div><button class="primary">+ Nova rota</button></div><div class="empty-card"><span>▱</span><h3>Central de entregas</h3><p>Organize cargas, manifeste documentos e acompanhe cada entrega.</p><button class="primary">Planejar rota</button></div></section>
+      <section id="financeiro" class="page module"><div class="module-heading"><div><h2>Financeiro</h2><p>Fluxo de caixa, contas a pagar e contas a receber.</p></div><button class="primary">+ Lançamento</button></div><div class="empty-card"><span>◉</span><h3>Controle financeiro</h3><p>Concilie recebimentos, acompanhe inadimplência e analise o caixa.</p><button class="primary">Novo lançamento</button></div></section>
+      <section id="fiscal" class="page module"><div class="module-heading"><div><h2>Fiscal</h2><p>NF-e, MDF-e, notas e obrigações fiscais.</p></div><button class="primary">+ Emitir NF-e</button></div><div class="empty-card"><span>▤</span><h3>Documentos fiscais</h3><p>Emita e acompanhe NF-e e MDF-e com segurança e rastreabilidade.</p><button class="primary">Emitir documento</button></div></section>
+      <section id="relatorios" class="page module"><div class="module-heading"><div><h2>Relatórios</h2><p>Indicadores para decisões comerciais e operacionais.</p></div><button class="primary">+ Criar relatório</button></div><div class="empty-card"><span>◲</span><h3>Inteligência do negócio</h3><p>Analise vendas, margem, giro de estoque, clientes e entregas.</p><button class="primary">Explorar relatórios</button></div></section>
+    </main><script src="app.js"></script>
+  </body>
+</html>
